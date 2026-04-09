@@ -1,0 +1,12 @@
+<html>
+<body>
+<h2>Барааны дэлгэрэнгүй</h2>
+
+<p><b>Нэр:</b> {{ item.name }}</p>
+<p><b>Төрөл:</b> {{ item.category.name }}</p>
+<p><b>Үнэ:</b> {{ item.price }}₮</p>
+
+<a href="{% url 'index' %}">Буцах</a>
+
+</body>
+</html>

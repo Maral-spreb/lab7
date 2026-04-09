@@ -1,0 +1,33 @@
+<html>
+<body>
+<h2>Барааны жагсаалт:</h2>
+
+
+
+
+{% if items %}
+<table border="1">
+<thead>
+    <th>Барааны нэр</th>
+    <th>Төрөл</th>
+    <th>Үнэ</th>
+    <th>delgerengui</th>
+
+
+
+</thead>
+{% for item in items %}
+<tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.category.name }}</td>
+    <td>{{ item.price }}</td>
+    <td><a href="{% url 'item_detail' item.id %}">Дэлгэрэнгүй</a></td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>Бараа олдсонгүй!!!</p>
+{% endif %}
+
+</body>
+</html>

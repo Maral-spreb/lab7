@@ -1,0 +1,20 @@
+<h2>Бараа хайх</h2>
+
+<form method="GET">
+    <input type="text" name="q" placeholder="Барааны нэр..." value="{{ query }}">
+    <button type="submit">Хайх</button>
+</form>
+
+<hr>
+
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li>
+            {{ item.name }} - {{ item.price }}₮ ({{ item.category.name }})
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Илэрц олдсонгүй!!!</p>
+{% endif %}

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hdy%^1d&5n@oh%)2$_9qof!hj0)&p5^(7+-!unxjl@@*+_!698
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', '').split(',')]
+ALLOWED_HOSTS = ['lab7.onrender.com', 'localhost', '127.0.0.1'] 
 
 
 # Application definition
@@ -74,19 +74,21 @@ WSGI_APPLICATION = 'lab7.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'neondb',
         'USER': 'neondb_owner',
-        'PASSWORD': 'npg_tF68HjcihyaJ',
-        'HOST': 'shiny-wildflower-a1zl9f6f.ap-southeast-1.aws.neon.tech',
+        'PASSWORD': 'npg_JXUWEtZ0FL7Y',
+        'HOST': 'ep-shiny-wildflower-a1zl9f6f.ap-southeast-1.aws.neon.tech',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
             
         },
-        'ALLOWED_HOSTS': ['*']
+        
     }
 }
 
@@ -130,6 +132,3 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]

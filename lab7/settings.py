@@ -24,9 +24,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-hdy%^1d&5n@oh%)2$_9qof!hj0)&p5^(7+-!unxjl@@*+_!698'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', '').split(',')]
 
 
 # Application definition
@@ -84,7 +84,11 @@ DATABASES = {
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
-        }
+            
+        },
+        'ALLOWED_HOSTS': ['lab7-ayq0.onrender.com',
+    'localhost',
+    '127.0.0.1'],
     }
 }
 

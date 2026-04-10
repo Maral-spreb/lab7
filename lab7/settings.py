@@ -24,7 +24,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-hdy%^1d&5n@oh%)2$_9qof!hj0)&p5^(7+-!unxjl@@*+_!698'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# git add lab7/settings.py
 
 ALLOWED_HOSTS = [ 'localhost',
                     '127.0.0.1',

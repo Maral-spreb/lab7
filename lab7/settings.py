@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'neondb',
         'USER': 'neondb_owner',
         'PASSWORD': 'npg_tF68HjcihyaJ',
-        'HOST': 'ep-shiny-wildflower-a1zl9f6f-pooler.ap-southeast-1.aws.neon.tech',
+        'HOST': 'shiny-wildflower-a1zl9f6f.ap-southeast-1.aws.neon.tech',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',

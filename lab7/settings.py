@@ -86,9 +86,7 @@ DATABASES = {
             'sslmode': 'require',
             
         },
-        'ALLOWED_HOSTS': ['lab7-ayq0.onrender.com',
-    'localhost',
-    '127.0.0.1'],
+        'ALLOWED_HOSTS': ['*']
     }
 }
 
